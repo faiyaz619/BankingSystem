@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <main class="">
+        <div class="text-3xl flex justify-center font-bold text-white bg-gray-600 p-2"> Banking System</div>
+        <div class="bg-gray-300 flex justify-around items-center h-[553px]">
+            <!-- Chart JS  starts-->
+            <div class=""> 
+                <canvas id="myChart">
+
+                </canvas>
+            </div>
+            <!-- Calculation part starts -->
+            <div> 
+                <!-- Total Balance Display -->
+                <div class="flex justify-center">
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <figure class="px-5 pt-5">
+                          <img src="./Assests/bank.png" height="100px"  width="100px" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                          <h2 class="card-title">Total Balance :</h2>
+                          <p id="userTotalBalance" class="text-xl">0</p>
+                        </div>
+                      </div>
+                </div>
+                <!-- Transaction starts -->
+                <div class="flex justify-center">
+                    <div class= "p-10">
+                        <div class="flex">
+                            <p>Total Deposit Amount:&nbsp; </p>
+                        <span id="totalDepositAmount"> 0 </span>
+                        </div>
+                        <div class="flex">
+                            <p>Last Deposit:&nbsp; </p>
+                        <span id="lastDepositAmount"> 0 </span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class= "p-10">
+                            <div class="flex">
+                                <p>Total Withdraw Amount:&nbsp; </p>
+                            <span id="totalWithdrawAmount"> 0 </span>
+                            </div>
+                            <div class="flex">
+                                <p>Last Withdraw:&nbsp; </p>
+                            <span id="lastWithdrawAmount"> 0 </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Transaction ends -->
+                <div class="flex justify-evenly">
+                    <div class="text-center text-2xl font-semibold">Deposit
+                        <div class="flex gap-10 justify-center p-4">
+                            <form autocomplete="on">
+                                <input type="number" placeholder="Input the amount to deposit" class="input input-bordered input-info w-full max-w-xs" name="userDeposit" min="0" max="100" id="userDeposit"/>
+                            </form>
+                            <button class="btn btn-outline btn-success" value="Button" id="depositBtn">Deposit</button>
+                        </div>
+                    </div>
+                    <div class="text-center text-2xl font-semibold ">Withdraw
+                        <div class="flex gap-10 justify-center p-4">
+                            <form autocomplete="on">
+                                <input type="number" placeholder="Input the amount to withdraw" class="input input-bordered input-info w-full max-w-lg" name="userWithdraw" min="0" max="100" id="userWithdraw"/>
+                            </form>
+                            <button class="btn btn-outline btn-error" value="Button" id="withdrawBtn">Withdraw</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center items-center bg-black font-light text-white">Copyright preseved by @Faiyaz2023</div>
+    </main>
+    <script src="./App/deposit.js"></script>
+    <script src="./App/withdraw.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./App/chart.js"></script>
+</body>
+</html>
